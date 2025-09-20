@@ -9,12 +9,6 @@ class Site(models.Model):
         ("unknown", "Unknown"),
     ]
 
-    SSL_STATUS_CHOICES = [
-        ("true", "Available"),
-        ("false", "Unavailable"),
-        ("unknown", "Unknown"),
-    ]
-
     user = models.ManyToManyField(
         settings.AUTH_USER_MODEL,
         related_name="sites"
