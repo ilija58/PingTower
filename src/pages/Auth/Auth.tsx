@@ -9,9 +9,12 @@ import styles from './Auth.module.scss'
 
 export function Auth() {
 	const [isLoginMode, setIsLoginMode] = useState(true)
-	const [nickname, setNickname] = useState('')
+	const [username, setUsername] = useState('')
+	const [name, setName] = useState('')
+	const [email, setEmail] = useState('')
 	const [password, setPassword] = useState('')
 	const [termsAccepted, setTermsAccepted] = useState(false)
+	const [registrationSuccess, setRegistrationSuccess] = useState(false)
 	const navigate = useNavigate()
 
 	// Get state and actions from the Zustand store
@@ -26,19 +29,30 @@ export function Auth() {
 
 	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault()
-		const action = isLoginMode ? login : register
+		setRegistrationSuccess(false)
 		try {
-			await action(nickname, password)
-			// The useEffect above will handle the redirect
+			if (isLoginMode) {
+				await login(username, password)
+				// The useEffect above will handle the redirect on success
+			} else {
+				await register(username, email, name, password)
+				// Handle successful registration
+				setRegistrationSuccess(true)
+				setIsLoginMode(true)
+				// Clear form fields except for username/password which might be the same
+				setName('')
+				setEmail('')
+				setTermsAccepted(false)
+			}
 		} catch (err) {
-			// Error is already set in the store, just log it
+			// Error is already set in the store, just log it for debugging
 			console.error('Failed to authenticate:', err)
 		}
 	}
 
-	let isButtonDisabled = isLoading || !nickname || !password
+	let isButtonDisabled = isLoading || !username || !password
 	if (!isLoginMode) {
-		isButtonDisabled = isButtonDisabled || !termsAccepted
+		isButtonDisabled = isButtonDisabled || !termsAccepted || !name || !email
 	}
 
 	return (
@@ -54,25 +68,60 @@ export function Auth() {
 						<p>Введите свои данные, чтобы продолжить работу</p>
 					</div>
 
+					{registrationSuccess && (
+						<p className={styles.success}>
+							Регистрация прошла успешно! Теперь вы можете войти.
+						</p>
+					)}
+
+					{!isLoginMode && (
+						<div className={styles.formGroup}>
+							<label htmlFor="name">ФИО</label>
+							<input
+								type="text"
+								id="name"
+								placeholder="Введите ваше ФИО"
+								value={name}
+								onChange={e => setName(e.target.value)}
+								required
+							/>
+						</div>
+					)}
+
 					<div className={styles.formGroup}>
-						<label htmlFor="nickname">Никнейм</label>
+						<label htmlFor="username">Никнейм</label>
 						<input
-							type="text" // Changed from email to text to reflect "nickname"
-							id="nickname"
+							type="text"
+							id="username"
 							placeholder={
 								isLoginMode ? 'Введите свой никнейм' : 'Придумайте себе никнейм'
 							}
-							value={nickname}
-							onChange={e => setNickname(e.target.value)}
+							value={username}
+							onChange={e => setUsername(e.target.value)}
 							required
 						/>
 					</div>
+
+					{!isLoginMode && (
+						<div className={styles.formGroup}>
+							<label htmlFor="email">Email</label>
+							<input
+								type="email"
+								id="email"
+								placeholder="Введите ваш email"
+								value={email}
+								onChange={e => setEmail(e.target.value)}
+								required
+							/>
+						</div>
+					)}
 
 					<div className={styles.formGroup}>
 						<label htmlFor="password">Пароль</label>
 						<input
 							type="password"
 							id="password"
+							placeholder="Введите ваше пэсуорд"
 							value={password}
 							onChange={e => setPassword(e.target.value)}
 							required
@@ -119,7 +168,7 @@ export function Auth() {
 						className={styles.secondaryButton}
 						onClick={() => {
 							setIsLoginMode(!isLoginMode)
-							// Also reset error from the store if you switch modes
+							setRegistrationSuccess(false)
 							useAuthStore.setState({ error: null })
 						}}
 					>

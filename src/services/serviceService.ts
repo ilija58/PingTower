@@ -1,53 +1,37 @@
+import api from '../api'
 import { type Service } from '../types'
 
-// Mock data
-const mockServices: Service[] = [
-	{
-		id: '1',
-		name: 'PingTower API',
-		status: 'online',
-		type: 'success',
-		url: 'api.pingtower.ru'
-	},
-	{
-		id: '2',
-		name: 'My Awesome Project',
-		status: 'offline',
-		type: 'error',
-		url: 'my-project.com'
-	},
-	{
-		id: '3',
-		name: 'Staging Server',
-		status: 'checking',
-		type: 'warning',
-		url: 'staging.dev.xyz'
-	}
-]
-
-// Mock API call to fetch user services
-export const fetchUserServices = (): Promise<Service[]> => {
-	console.log('Fetching user services...')
-	return new Promise(resolve => {
-		setTimeout(() => {
-			console.log('Fetched services:', mockServices)
-			resolve(mockServices)
-		}, 1200) // Simulate network delay
-	})
+export type CreateSitePayload = {
+	name: string
+	target: string
+	check_type: 'http' | 'ping' | 'tcp'
+	http_method?: 'GET' | 'POST' | 'HEAD' | 'PUT' | 'PATCH' | 'OPTIONS'
+	port?: number
+	timeout: number
+	check_interval: number
+	expected_status_code?: number
+	ssl_check_enabled: boolean
+	domain_check_enabled: boolean
+	active: boolean
 }
 
-export const fetchServiceById = (id: string): Promise<Service> => {
-	console.log(`Fetching service with id: ${id}...`)
-	return new Promise((resolve, reject) => {
-		setTimeout(() => {
-			const service = mockServices.find(s => s.id === id)
-			if (service) {
-				console.log('Found service:', service)
-				resolve(service)
-			} else {
-				console.error(`Service with id ${id} not found.`)
-				reject(new Error('Сервис не найден'))
-			}
-		}, 500)
-	})
+export const getAllSites = async (): Promise<Service[]> => {
+	const response = await api.get<Service[]>('/api/sites/')
+	return response.data
+}
+
+export const getSiteById = async (id: number): Promise<Service> => {
+	const response = await api.get<Service>(`/api/sites/${id}/`)
+	return response.data
+}
+
+export const createSite = async (
+	siteData: CreateSitePayload
+): Promise<Service> => {
+	const response = await api.post<Service>('/api/sites/', siteData)
+	return response.data
+}
+
+export const deleteSite = async (id: number): Promise<void> => {
+	await api.delete(`/api/sites/${id}/`)
 }

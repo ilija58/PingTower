@@ -1,6 +1,7 @@
 import { create } from 'zustand'
 
 import * as authService from '../services/authService'
+import * as tokenService from '../services/tokenService'
 
 import { useUserStore } from './userStore'
 
@@ -9,26 +10,33 @@ interface AuthState {
 	isAuthenticated: boolean
 	isLoading: boolean
 	error: string | null
-	login: (nickname: string, password: string) => Promise<void>
-	register: (nickname: string, password: string) => Promise<void>
+	login: (username: string, password: string) => Promise<void>
+	register: (
+		username: string,
+		email: string,
+		name: string,
+		password: string
+	) => Promise<void>
 	logout: () => void
 }
 
 export const useAuthStore = create<AuthState>(set => ({
 	// --- STATE ---
-	token: authService.getToken(),
-	isAuthenticated: !!authService.getToken(),
+	token: tokenService.getToken(),
+	isAuthenticated: !!tokenService.getToken(),
 	isLoading: false,
 	error: null,
 
 	// --- ACTIONS ---
-	login: async (nickname, password) => {
+	login: async (username, password) => {
 		set({ isLoading: true, error: null })
 		try {
-			const { token, user } = await authService.login(nickname, password)
-			authService.storeToken(token)
+			const { access, refresh } = await authService.login(username, password)
+			tokenService.storeToken(access)
+			tokenService.storeRefreshToken(refresh)
+			const user = await authService.getMe()
 			useUserStore.getState().setUser(user) // Update userStore
-			set({ token, isAuthenticated: true, isLoading: false })
+			set({ token: access, isAuthenticated: true, isLoading: false })
 		} catch (error: unknown) {
 			if (error instanceof Error) {
 				set({ error: error.message, isLoading: false })
@@ -39,13 +47,11 @@ export const useAuthStore = create<AuthState>(set => ({
 		}
 	},
 
-	register: async (nickname, password) => {
+	register: async (username, email, name, password) => {
 		set({ isLoading: true, error: null })
 		try {
-			const { token, user } = await authService.register(nickname, password)
-			authService.storeToken(token)
-			useUserStore.getState().setUser(user) // Update userStore
-			set({ token, isAuthenticated: true, isLoading: false })
+			await authService.register(username, email, name, password)
+			set({ isLoading: false })
 		} catch (error: unknown) {
 			if (error instanceof Error) {
 				set({ error: error.message, isLoading: false })
@@ -57,7 +63,7 @@ export const useAuthStore = create<AuthState>(set => ({
 	},
 
 	logout: () => {
-		authService.logout()
+		tokenService.logout()
 		useUserStore.getState().setUser(null) // Clear userStore
 		set({ token: null, isAuthenticated: false })
 	}

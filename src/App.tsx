@@ -13,7 +13,7 @@ import { ProtectedRoute } from './widgets/ProtectedRoute/ProtectedRoute'
 
 function App() {
 	const isAuthenticated = useAuthStore(state => state.isAuthenticated)
-	const fetchServices = useUserStore(state => state.fetchServices)
+	const fetchServices = useUserStore(state => state.fetchSites)
 
 	useEffect(() => {
 		if (isAuthenticated) {

@@ -1,13 +1,13 @@
 import { create } from 'zustand'
 
-import { fetchServiceById } from '../services/serviceService'
+import { getSiteById } from '../services/serviceService'
 import { type Service } from '../types'
 
 interface ServiceState {
 	service: Service | null
 	isLoading: boolean
 	error: string | null
-	fetchService: (id: string) => Promise<void>
+	fetchService: (id: number) => Promise<void>
 	clearService: () => void
 }
 
@@ -21,7 +21,7 @@ export const useServiceStore = create<ServiceState>(set => ({
 	fetchService: async id => {
 		set({ isLoading: true, error: null, service: null })
 		try {
-			const service = await fetchServiceById(id)
+			const service = await getSiteById(id)
 			set({ service, isLoading: false })
 		} catch (error: unknown) {
 			if (error instanceof Error) {

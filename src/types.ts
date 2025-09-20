@@ -1,14 +1,19 @@
 export interface User {
-	id: string
-	fullName: string
+	id: number
+	username: string
 	email: string
-	nickname: string
+	full_name: string
 }
 
 export interface Service {
-	id: string
+	id: number
 	name: string
-	status: 'online' | 'offline' | 'checking'
-	type: 'success' | 'error' | 'warning'
 	url: string
+	check_interval: number
+	timeout: number
+	expected_status_code: number
+	active: boolean
+	status: 'up' | 'down'
+	created_at: string
+	updated_at: string
 }

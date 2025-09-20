@@ -53,14 +53,14 @@ export function Header() {
 							onClick={() => setIsDropdownOpen(!isDropdownOpen)}
 						>
 							<img src={avatar} alt="profile image" />
-							<div className={styles.text}>{user ? user.nickname : '...'}</div>
+							<div className={styles.text}>{user ? user.username : '...'}</div>
 						</button>
 
 						{isDropdownOpen && (
 							<div className={styles.profileDropdown}>
 								<div className={styles.userInfo}>
 									<p className={styles.name}>
-										{user?.fullName || user?.nickname}
+										{user?.full_name || user?.username}
 									</p>
 									<p className={styles.email}>{user?.email}</p>
 								</div>

@@ -1,7 +1,8 @@
 import { useEffect } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 
 import { useServiceStore } from '@/store/serviceStore'
+import { useUserStore } from '@/store/userStore'
 
 import IcoConfigure from '../../assets/img/configure-ico.svg'
 import IcoDelete from '../../assets/img/delete-ico.svg'
@@ -13,18 +14,27 @@ import { ROUTES } from '@/routes'
 
 export function Service() {
 	const { id } = useParams<{ id: string }>()
+	const navigate = useNavigate()
 	const { service, isLoading, error, fetchService, clearService } =
 		useServiceStore()
+	const { removeSite } = useUserStore(state => state)
 
 	useEffect(() => {
 		if (id) {
-			fetchService(id)
+			fetchService(Number(id))
 		}
 
 		return () => {
 			clearService()
 		}
 	}, [id, fetchService, clearService])
+
+	const handleDelete = async (id: number) => {
+		if (window.confirm('Are you sure you want to delete this site?')) {
+			await removeSite(id)
+			navigate(ROUTES.home.path)
+		}
+	}
 
 	if (isLoading) {
 		return (
@@ -61,7 +71,7 @@ export function Service() {
 					<div className={styles.left}>
 						<div className={styles.top}>{service.name}</div>
 						<div className={styles.bottom}>
-							<div className={`${styles.status} ${styles[service.type]}`}>
+							<div className={`${styles.status} ${styles[service.status]}`}>
 								{service.status}
 							</div>
 							<div className={styles.check}>Проверка каждую минуту</div>
@@ -74,7 +84,10 @@ export function Service() {
 						<button className={styles.configure}>
 							<img src={IcoConfigure} alt="stop ico" /> Настроить
 						</button>
-						<button className={styles.delete}>
+						<button
+							className={styles.delete}
+							onClick={() => handleDelete(service.id)}
+						>
 							<img src={IcoDelete} alt="stop ico" /> Удалить
 						</button>
 					</div>

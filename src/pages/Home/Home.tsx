@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 import { useUserStore } from '@/store/userStore'
@@ -5,22 +6,33 @@ import { useUserStore } from '@/store/userStore'
 import IcoFolder from '../../assets/img/folder-add-ico.svg'
 import IcoLightError from '../../assets/img/light-error.svg'
 import IcoLightSuccess from '../../assets/img/light-success.svg'
-import IcoLightWarning from '../../assets/img/light-warning.svg'
 import IcoOpen from '../../assets/img/open-ico.svg'
 import SearchIcon from '../../assets/img/search-ico.svg'
 
 import styles from './Home.module.scss'
 import { ROUTES } from '@/routes'
 
-const lights = {
-	success: IcoLightSuccess,
-	error: IcoLightError,
-	warning: IcoLightWarning
+const statusMap = {
+	up: {
+		text: 'Online',
+		style: 'success',
+		icon: IcoLightSuccess
+	},
+	down: {
+		text: 'Offline',
+		style: 'error',
+		icon: IcoLightError
+	}
 }
 
 export function Home() {
-	const services = useUserStore(state => state.services)
-	const isLoadingServices = useUserStore(state => state.isLoadingServices)
+	const { services, isLoadingServices, fetchSites } = useUserStore(
+		state => state
+	)
+
+	useEffect(() => {
+		fetchSites()
+	}, [fetchSites])
 
 	return (
 		<div className={styles.container}>
@@ -33,8 +45,8 @@ export function Home() {
 						<img src={SearchIcon} alt="Search" className={styles.searchIcon} />
 						<input type="text" placeholder="Поиск..." id={styles.search} />
 					</div>
-					<Link to="/addService" className={styles.addBtn}>
-						Добавьте сервис
+					<Link to={ROUTES.addService.path} className={styles.addBtn}>
+						Добавить сервис
 					</Link>
 				</div>
 			</div>
@@ -44,30 +56,34 @@ export function Home() {
 					<p>Загрузка сервисов...</p>
 				) : services.length > 0 ? (
 					<div className={styles.servicesList}>
-						{services.map(service => (
-							<div className={styles.serviceCard}>
-								<div className={styles.left}>
-									<div className={styles.light}>
-										<img src={lights[service.type]} alt="light ico" />
-									</div>
-									<div className={styles.text}>
-										<div className={styles.serviceName}>{service.name}</div>
-										<div className={`${styles.status} ${styles[service.type]}`}>
-											{service.status}
+						{services.map(service => {
+							const statusInfo = statusMap[service.status] || statusMap.down
+							return (
+								<div key={service.id} className={styles.serviceCard}>
+									<div className={styles.left}>
+										<div className={styles.light}>
+											<img src={statusInfo.icon} alt="status icon" />
+										</div>
+										<div className={styles.text}>
+											<div className={styles.serviceName}>{service.name}</div>
+											<div
+												className={`${styles.status} ${styles[statusInfo.style]}`}
+											>
+												{statusInfo.text}
+											</div>
 										</div>
 									</div>
+									<div className={styles.right}>
+										<Link
+											to={`/service/${service.id}`}
+											className={styles.openBtn}
+										>
+											Открыть <img src={IcoOpen} alt="open ico" />
+										</Link>
+									</div>
 								</div>
-								<div className={styles.right}>
-									<Link
-										to={`/service/${service.id}`}
-										key={service.id}
-										className={styles.openBtn}
-									>
-										Открыть <img src={IcoOpen} alt="open ico" />
-									</Link>
-								</div>
-							</div>
-						))}
+							)
+						})}
 					</div>
 				) : (
 					<div className={styles.block}>

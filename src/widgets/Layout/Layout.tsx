@@ -1,3 +1,4 @@
+import { Toaster } from 'react-hot-toast'
 import { Outlet } from 'react-router-dom'
 
 import { SearchProvider } from '@/providers/search/SearchProvider'
@@ -17,6 +18,7 @@ export function Layout() {
 				</div>
 				<Footer />
 			</div>
+			<Toaster />
 		</SearchProvider>
 	)
 }
