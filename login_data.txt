@@ -1,0 +1,3 @@
+PostgreSQL DB pingtower:
+login - toweradm
+password - hhiqkert

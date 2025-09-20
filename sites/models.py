@@ -9,6 +9,12 @@ class Site(models.Model):
         ("unknown", "Unknown"),
     ]
 
+    SSL_STATUS_CHOICES = [
+        ("true", "Available"),
+        ("false", "Unavailable"),
+        ("unknown", "Unknown"),
+    ]
+
     user = models.ManyToManyField(
         settings.AUTH_USER_MODEL,
         related_name="sites"
@@ -22,6 +28,8 @@ class Site(models.Model):
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default="unknown")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    #ssl_status = models.CharField(max_length=20, choices=SSL_STATUS_CHOICES, default="unknown")
+    #ssl_expired = models.DateTimeField()
 
     def __str__(self):
         return f"{self.name} ({self.url})"

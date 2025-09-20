@@ -39,9 +39,10 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "rest_framework",
     "users",
     "sites",
-    "rest_framework",
+    "checks",
 ]
 
 REST_FRAMEWORK = {
@@ -114,13 +115,27 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+CELERY_BROKER_URL = "amqp://guest:guest@localhost:5672//"  # RabbitMQ
+CELERY_RESULT_BACKEND = "rpc://"
+CELERY_ACCEPT_CONTENT = ["json"]
+CELERY_TASK_SERIALIZER = "json"
+CELERY_RESULT_SERIALIZER = "json"
+
+
+CELERY_BEAT_SCHEDULE = {
+    "run-scheduler-every-10-seconds": {
+        "task": "checks.tasks.schedule_checks",
+        "schedule": 10.0,  # каждые 10 секунд
+    },
+}
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "Europe/Moscow"
 
 USE_I18N = True
 
