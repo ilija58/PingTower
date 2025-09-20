@@ -1,0 +1,11 @@
+.layout {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.container {
+	width: 1080px;
+	margin: 0 auto;
+	flex-grow: 1; /* This is the magic */
+}

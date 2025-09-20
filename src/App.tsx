@@ -1,35 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+import { AddService } from './pages/AddService/AddService';
+import { Auth } from './pages/Auth/Auth';
+import { Home } from './pages/Home/Home';
+import { Service } from './pages/Service/Service';
+import { ROUTES } from './routes';
+import { useAuthStore } from './store/authStore';
+import { useUserStore } from './store/userStore';
+import { Layout } from './widgets/Layout/Layout';
+import { ProtectedRoute } from './widgets/ProtectedRoute/ProtectedRoute';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const isAuthenticated = useAuthStore(state => state.isAuthenticated);
+  const fetchServices = useUserStore(state => state.fetchServices);
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+  useEffect(() => {
+    if (isAuthenticated) {
+      fetchServices();
+    }
+  }, [isAuthenticated, fetchServices]);
+
+	return (
+		<BrowserRouter>
+			<Routes>
+				{/* Public route for authentication */}
+				<Route path={ROUTES.auth.path} element={<Auth />} />
+
+				{/* Protected routes */}
+				<Route element={<ProtectedRoute />}>
+					<Route element={<Layout />}>
+						<Route path={ROUTES.home.path} element={<Home />} />
+						<Route path={ROUTES.service.path} element={<Service />} />
+						<Route path={ROUTES.addService.path} element={<AddService />} />
+					</Route>
+				</Route>
+			</Routes>
+		</BrowserRouter>
+	)
 }
 
 export default App

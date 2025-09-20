@@ -1,0 +1,196 @@
+@use '../../assets/scss/mixins' as *;
+
+.container {
+	width: 1080px;
+	margin-top: 32px;
+}
+
+.heading {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 32px;
+
+	p {
+		margin: 0;
+		font-size: 24px;
+		font-weight: 600;
+	}
+}
+
+.right {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.searchInputWrapper {
+	background-color: var(--surface-bright);
+	border: 1px solid var(--outline-base);
+	border-radius: 10px;
+	padding: 11px 14px;
+	gap: 6px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.searchIcon {
+	width: 16px;
+	height: 16px;
+	pointer-events: none;
+}
+
+#search {
+	min-width: 206px;
+	height: 18px;
+	padding: 0;
+	border: none;
+	border-radius: 0;
+	outline: none;
+}
+
+.addBtn {
+	color: var(--on-primary);
+	background-color: var(--primary);
+	border: none;
+	border-radius: 96px;
+	padding: 8px 12px;
+	text-decoration: none;
+
+	&:hover {
+		background-color: var(--primary-high);
+	}
+
+	&:active {
+		background-color: var(--primary-highest);
+	}
+}
+
+.content {
+	padding: 20px;
+	box-shadow:
+		0 8px 22px 8px var(--shadow-Shadow-1, rgba(74, 80, 94, 0.05)),
+		0 4px 16px 0 var(--shadow-Shadow-2, rgba(60, 83, 135, 0.09));
+	border-radius: 14px;
+}
+
+/* --- Services List Styles --- */
+.servicesList {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.serviceCard {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 16px;
+	background-color: var(--surface-bright);
+	border: 1px solid var(--outline-base);
+	border-radius: 10px;
+	transition:
+		border-color 0.2s,
+		box-shadow 0.2s;
+
+	&:hover {
+		border-color: var(--outline-variant);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+	}
+}
+
+.left {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.right {
+	.openBtn {
+		text-decoration: none;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 130%;
+		color: var(--on-neutral-container);
+		display: flex;
+		align-items: center;
+		gap: 6px;
+	}
+}
+
+.serviceName {
+	@include title4;
+	color: var(--on-surface);
+	margin-bottom: 8px;
+}
+
+.status {
+	@include bodyM;
+
+	&.success {
+		color: var(--on-success-container);
+	}
+
+	&.error {
+		color: var(--on-error-container);
+	}
+
+	&.warning {
+		color: var(--on-warning-container);
+	}
+}
+
+.block {
+	.heading {
+		@include title4;
+		color: var(--on-surface);
+		margin: 0;
+		margin-bottom: 24px;
+	}
+}
+
+.add {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+
+	img {
+		width: 64px;
+		height: 64px;
+	}
+
+	.title {
+		@include title5;
+		color: var(--on-surface);
+		margin: 0;
+		margin-bottom: 4px;
+		text-align: center;
+	}
+
+	.text {
+		@include bodyS;
+		color: var(--on-surface-variant);
+		text-align: center;
+		margin: 0;
+	}
+
+	a {
+		color: var(--on-secondary);
+		background-color: var(--secondary);
+		border: none;
+		border-radius: 96px;
+		padding: 8px 12px;
+		text-decoration: none;
+
+		&:hover {
+			background-color: var(--secondary-high);
+		}
+
+		&:active {
+			background-color: var(--secondary-highest);
+		}
+	}
+}

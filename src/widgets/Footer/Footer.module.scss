@@ -1,0 +1,43 @@
+@use '../../assets/scss/mixins' as *;
+
+.footer {
+	padding: 24px 0;
+	border-top: 1px solid var(--outline-base);
+	margin-top: auto;
+}
+
+.container {
+	max-width: 1080px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	gap: 48px;
+
+	p {
+		margin: 0;
+	}
+}
+
+.copyright {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	@include bodyS;
+	color: var(--on-surface);
+}
+
+.list {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+
+	.item {
+		@include bodyS;
+		color: var(--on-surface);
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

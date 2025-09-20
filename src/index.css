@@ -1,68 +1,104 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+	margin: 0;
+	padding: 0;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+html {
+	/* Стили для скроллбара (Webkit) */
+	&::-webkit-scrollbar {
+		width: 12px;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: transparent;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: var(--neutral-container-high);
+		border-radius: 20px;
+		border: 4px solid transparent;
+		background-clip: content-box;
+	}
+
+	/* Стили для скроллбара (Firefox) */
+	scrollbar-width: thin;
+	scrollbar-color: var(--neutral-container-high) transparent;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+:root {
+	font-family: 'Inter';
+	line-height: 1.5;
+	font-weight: 400;
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+	color-scheme: light dark;
+	color: #3b3b3b;
+	background-color: #ffffff;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	/* Primary */
+	--primary: #49b3ff;
+	--primary-high: #1795f0;
+	--primary-highest: #077ed4;
+	--on-primary: #ecf3ff;
+
+	/* Secondary */
+	--secondary: #d0e2ff;
+	--secondary-high: #b4d1ff;
+	--secondary-highest: #a1c4ff;
+	--on-secondary: #077ed4;
+
+	/* Success */
+	--success: #30e462;
+	--on-success: #ffffff;
+	--success-container: #e3f8ea;
+	--success-container-lowest: #c3f6d4;
+	--on-success-container: #0ead3a;
+
+	/* Warning */
+	--warning: #ff8731;
+	--on-warning: rgba(255, 255, 255, 1);
+	--warning-container: rgba(255, 240, 230, 1);
+	--warning-container-lowest: rgba(255, 220, 196, 1);
+	--on-warning-container: rgba(232, 97, 0, 1);
+
+	/* Error */
+	--error: #ff0000;
+	--on-error: #ffffff;
+	--error-container: #ffe9ed;
+	--error-container-lowest: #ffd5d3;
+	--on-error-container: #ff0000;
+
+	/* Disabled */
+	--disabled-container: #f2f2f3;
+	--on-disabled-container: #c3c3c4;
+
+	/* Neutral */
+	--neutral-container: #e7e7e7;
+	--neutral-container-high: #d7d7d7;
+	--neutral-container-highest: #c7c7c7;
+	--on-neutral-container: #3b3b3b;
+
+	/* Surface */
+	--surface-default: #f7f8f7;
+	--surface-bright: #ffffff;
+	--surface-container-lowest: #f5f5f5;
+	--surface-container-low: #f1f1f1;
+	--surface-container: #eaeaea;
+	--surface-container-high: #e0e0e0;
+	--surface-container-highest: #d7d7d7;
+	--on-surface: rgba(59, 59, 59, 1);
+	--on-surface-variant: rgba(129, 130, 129, 1);
+
+	/* Outline */
+	--outline-base: #e7e7e7;
+	--outline-variant: #818281;
+
+	/* Overlay */
+	--overlay-scrim-30: rgba(0, 0, 0, 0.3);
 }

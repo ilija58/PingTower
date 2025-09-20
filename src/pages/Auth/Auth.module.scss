@@ -1,0 +1,249 @@
+@use '../../assets/scss/mixins' as *;
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	background-color: var(--surface-default);
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	text-decoration: none;
+	margin-bottom: 32px;
+
+	img {
+		width: 40px;
+		height: 40px;
+	}
+
+	.text {
+		font-family: 'Geologica';
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 110%;
+		color: var(--on-surface);
+	}
+}
+
+.formWrapper {
+	width: 100%;
+	max-width: 420px;
+	background-color: var(--surface-bright);
+	padding: 20px;
+	border-radius: 14px;
+	border: 1px solid var(--outline-base);
+}
+
+.header {
+	margin-bottom: 24px;
+	h2 {
+		margin: 0 0 8px 0;
+		@include title3;
+		color: var(--on-surface);
+	}
+	p {
+		margin: 0;
+		@include bodyM;
+		color: var(--on-surface-variant);
+	}
+}
+
+.formGroup {
+	margin-bottom: 16px;
+	label {
+		display: block;
+		margin-bottom: 8px;
+		@include title5;
+		font-family: 'Inter';
+	}
+	input {
+		width: 388px;
+		padding: 13.5px 16px;
+		font-family: 'Inter';
+		border-radius: 8px;
+		color: var(--on-surface);
+		border: 1px solid var(--outline-base);
+		background-color: var(--surface-bright);
+		font-size: 14px;
+
+		&:focus {
+			outline: 2px solid var(--primary);
+			border-color: transparent;
+		}
+	}
+}
+
+.terms {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-bottom: 20px;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 130%;
+	font-family: 'Inter';
+	color: var(--on-surface);
+
+	input[type='checkbox'] {
+		margin-top: 2px;
+		width: 16px;
+		height: 16px;
+	}
+
+	a {
+		text-decoration: underline;
+		color: var(--on-surface);
+	}
+}
+
+.error {
+	color: var(--error);
+	text-align: center;
+	margin-bottom: 16px;
+}
+
+.primaryButton,
+.secondaryButton {
+	width: 100%;
+	padding: 13.5px 0;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 130%;
+	border-radius: 96px;
+	color: var(--on-neutral-container);
+	font-family: 'Inter';
+	cursor: pointer;
+	transition:
+		background-color 0.3s,
+		color 0.3s;
+}
+
+.primaryButton {
+	color: var(--on-primary);
+	background-color: var(--primary);
+	border: none;
+
+	&:hover {
+		background-color: var(--primary-high);
+	}
+
+	&:active {
+		background-color: var(--primary-highest);
+	}
+
+	&:disabled {
+		background-color: var(--disabled-container);
+		color: var(--on-disabled-container);
+		cursor: not-allowed;
+	}
+}
+
+.secondaryButton {
+	color: var(--on-surface);
+	background-color: var(--neutral-container);
+	border: none;
+
+	&:hover {
+		background-color: var(--neutral-container-high);
+	}
+
+	&:active {
+		background-color: var(--neutral-container-highest);
+	}
+}
+
+.divider {
+	color: var(--on-surface-variant);
+	margin: 16px 0;
+	@include bodyM;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	.line {
+		border-top: 1px solid var(--outline-base);
+		width: 180px;
+	}
+}
+
+/* --- Custom Checkbox Styles --- */
+.customCheckbox {
+	display: flex;
+	align-items: flex-start;
+	position: relative;
+	cursor: pointer;
+	user-select: none;
+	margin-bottom: 20px;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 130%;
+	font-family: 'Inter';
+	color: var(--on-surface);
+
+	a {
+		text-decoration: underline;
+		color: var(--on-surface);
+	}
+
+	/* Hide the browser's default checkbox */
+	input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		height: 0;
+		width: 0;
+	}
+
+	/* Create a custom checkbox */
+	.checkmark {
+		margin-top: 1px;
+		flex-shrink: 0;
+		height: 16px;
+		width: 16px;
+		background-color: var(--surface-bright);
+		border: 1.5px solid var(--outline-variant);
+		border-radius: 4px;
+		transition:
+			background-color 0.2s,
+			border-color 0.2s;
+		margin-right: 8px;
+	}
+
+	&:hover input ~ .checkmark {
+		background-color: #eee;
+	}
+
+	input:checked ~ .checkmark {
+		background-color: var(--success);
+		border-color: var(--success);
+	}
+
+	.checkmark:after {
+		content: '';
+		position: absolute;
+		display: none;
+	}
+
+	input:checked ~ .checkmark:after {
+		display: block;
+	}
+
+	.checkmark:after {
+		left: 5px;
+		top: 2px;
+		width: 5px;
+		height: 10px;
+		border: solid white;
+		border-width: 0 2px 2px 0;
+		transform: rotate(45deg);
+	}
+
+	.labelText {
+		line-height: 1.4;
+	}
+}
