@@ -17,7 +17,7 @@ To get a local copy up and running, follow these simple steps.
 
 1.  Clone the repo
     ```sh
-    git clone https://github.com/your_username/PingTower.git
+    git clone https://github.com/ilija58/PingTower.git
     ```
 2.  Install NPM packages
     ```sh
@@ -55,7 +55,7 @@ In the project directory, you can run:
 ### `npm run dev`
 
 Runs the app in development mode.
-Open [http://localhost:5173](http://localhost:5173) to view it in the browser (the port may vary).
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser (the port may vary).
 
 ### `npm run prod`
 
@@ -115,7 +115,7 @@ PingTower — это веб-приложение, предназначенное
 
 1.  Клонируйте репозиторий
     ```sh
-    git clone https://github.com/your_username/PingTower.git
+    git clone https://github.com/ilija58/PingTower.git
     ```
 2.  Установите NPM пакеты
     ```sh
@@ -153,7 +153,7 @@ PingTower — это веб-приложение, предназначенное
 ### `npm run dev`
 
 Запускает приложение в режиме разработки.
-Откройте [http://localhost:5173](http://localhost:5173), чтобы просмотреть его в браузере (порт может отличаться).
+Откройте [http://localhost:3000](http://localhost:3000), чтобы просмотреть его в браузере (порт может отличаться).
 
 ### `npm run prod`
 
