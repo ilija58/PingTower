@@ -5,12 +5,8 @@ import { SearchedContext } from './search.context'
 export function SearchProvider({ children }: { children: ReactNode }) {
 	const [search, setSearch] = useState('')
 
-	const setFilter = (value: string) => {
-		setSearch(value)
-	}
-
 	return (
-		<SearchedContext.Provider value={{ search, setFilter }}>
+		<SearchedContext.Provider value={{ search, setSearch }}>
 			{children}
 		</SearchedContext.Provider>
 	)

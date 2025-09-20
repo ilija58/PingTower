@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 
+import { useAuthStore } from '@/store/authStore'
+import { useUserStore } from '@/store/userStore'
+
 import avatar from '../../assets/img/avatar.png'
 import logo from '../../assets/img/logo.svg'
 import IcoLogout from '../../assets/img/logout-ico.svg'
@@ -8,8 +11,6 @@ import IcoNotification from '../../assets/img/notification-ico.svg'
 
 import styles from './Header.module.scss'
 import { ROUTES } from '@/routes'
-import { useAuthStore } from '@/store/authStore'
-import { useUserStore } from '@/store/userStore'
 
 export function Header() {
 	const logout = useAuthStore(state => state.logout)

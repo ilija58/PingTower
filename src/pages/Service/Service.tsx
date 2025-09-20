@@ -1,6 +1,8 @@
 import { useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 
+import { useServiceStore } from '@/store/serviceStore'
+
 import IcoConfigure from '../../assets/img/configure-ico.svg'
 import IcoDelete from '../../assets/img/delete-ico.svg'
 import IcoStop from '../../assets/img/stop-ico.svg'
@@ -8,7 +10,6 @@ import { ResponseTimeChart } from '../../widgets/ResponseTimeChart/ResponseTimeC
 
 import styles from './Service.module.scss'
 import { ROUTES } from '@/routes'
-import { useServiceStore } from '@/store/serviceStore'
 
 export function Service() {
 	const { id } = useParams<{ id: string }>()

@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
+import { useAuthStore } from '@/store/authStore'
+
 import Logo from '../../assets/img/logo.svg'
 
 import styles from './Auth.module.scss'
-import { useAuthStore } from '@/store/authStore'
 
 export function Auth() {
 	const [isLoginMode, setIsLoginMode] = useState(true)

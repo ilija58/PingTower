@@ -8,8 +8,12 @@
 	"plugins": ["@trivago/prettier-plugin-sort-imports"],
 	"importOrder": [
 		"<THIRD_PARTY_MODULES>",
-		"^@/pages/(.*)$",
+		"^@/hooks/(.*)$",
+		"^@/providers/(.*)$",
+		"^@/store/(.*)$",
+		"^@/services/(.*)$",
 		"^@/widgets/(.*)$",
+		"^@/assets/(.*)$",
 		"^^.+\\.(template\\.html|nodule\\.scss)$",
 		"^../(.*)",
 		"^./(.*)$"

@@ -1,3 +1,11 @@
-import { createContext } from 'react'
+import { type Dispatch, type SetStateAction, createContext } from 'react'
 
-export const SearchedContext = createContext<any>({} as any)
+export interface ISearchedContext {
+	search: string
+	setSearch: Dispatch<SetStateAction<string>>
+}
+
+export const SearchedContext = createContext<ISearchedContext>({
+	search: '',
+	setSearch: () => {}
+})

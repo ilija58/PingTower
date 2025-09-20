@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
 
+import { useUserStore } from '@/store/userStore'
+
 import IcoFolder from '../../assets/img/folder-add-ico.svg'
 import IcoLightError from '../../assets/img/light-error.svg'
 import IcoLightSuccess from '../../assets/img/light-success.svg'
@@ -9,7 +11,6 @@ import SearchIcon from '../../assets/img/search-ico.svg'
 
 import styles from './Home.module.scss'
 import { ROUTES } from '@/routes'
-import { useUserStore } from '@/store/userStore'
 
 const lights = {
 	success: IcoLightSuccess,
