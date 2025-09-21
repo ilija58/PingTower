@@ -1,5 +1,24 @@
+import requests
+from django.conf import settings
 from django.utils import timezone
 from .models import Incident
+
+def send_telegram_message(chat_id: str, text: str):
+    """
+    Отправляет уведомление в Telegram конкретному пользователю.
+    """
+    token = getattr(settings, "TELEGRAM_BOT_TOKEN", None)
+    if not token or not chat_id:
+        return
+
+    url = f"https://api.telegram.org/bot{token}/sendMessage"
+    payload = {"chat_id": chat_id, "text": text, "parse_mode": "HTML"}
+
+    try:
+        requests.post(url, json=payload, timeout=5)
+    except Exception as e:
+        print(f"⚠️ Telegram send error: {e}")
+
 
 def process_incident(site, new_status):
     """
@@ -12,7 +31,7 @@ def process_incident(site, new_status):
             Incident.objects.create(
                 site=site,
                 severity="major",  # можно усложнить позже
-                description=f"Site {site.url} is down",
+                description=f"Site {site.target} is down",
             )
 
     # Если сайт восстановился → закрываем последний открытый инцидент
@@ -24,3 +43,22 @@ def process_incident(site, new_status):
                 open_incident.description or ""
             ) + f"\nResolved at {open_incident.end_time}"
             open_incident.save()
+
+    if new_status == "fail":
+        msg = f"Сайт <b>{site.name}</b> ({site.target}) недоступен!"
+    elif new_status == "ok":
+        msg = f"Сайт <b>{site.name}</b> снова работает."
+    elif new_status == "degraded":
+        msg = f" Сайт <b>{site.name}</b> ({site.target}) работает нестабильно."
+    else:
+        msg = None
+
+    if msg:
+        for user in site.users.all():
+            if getattr(user, "telegram_chat_id", None):
+                send_telegram_message(user.telegram_chat_id, msg)
+
+
+
+
+

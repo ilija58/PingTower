@@ -126,13 +126,10 @@ CELERY_TASK_SERIALIZER = "json"
 CELERY_RESULT_SERIALIZER = "json"
 
 
-CELERY_BEAT_SCHEDULE = {
-    "run-scheduler-every-10-seconds": {
-        "task": "checks.tasks.schedule_checks",
-        "schedule": 10.0,  # каждые 10 секунд
-    },
-}
+CELERY_BEAT_SCHEDULE = {}
 
+TELEGRAM_BOT_TOKEN = "7623273595:AAE3lr7o-ncGoAAw19h9A99v7ECsRvhfiLc"
+TELEGRAM_CHAT_ID = "395668459"
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/

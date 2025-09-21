@@ -8,13 +8,24 @@ class SiteSerializer(serializers.ModelSerializer):
         model = Site
         fields = [
             "id",
+            "users",
             "name",
-            "url",
-            "check_interval",
+            "target",
+            "check_type",
+            "http_method",
+            "port",
             "timeout",
+            "check_interval",
             "expected_status_code",
-            "active",
+            "degraded_latency_ms",
+            "fail_threshold",
+            "recovery_threshold",
+            "ssl_check_enabled",
+            "ssl_expiry_alert_days",
+            "domain_check_enabled",
+            "domain_expiry_alert_days",
             "status",
+            "active",
             "created_at",
             "updated_at",
         ]
@@ -22,5 +33,5 @@ class SiteSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         site = Site.objects.create(**validated_data)
-        site.user.add(self.context["request"].user)
+        site.users.add(self.context["request"].user)
         return site
