@@ -1,0 +1,2285 @@
+[
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 4,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 4,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 4,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 4,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 5,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 5,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 5,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 5,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 6,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 6,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 6,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 6,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add site",
+    "content_type": 7,
+    "codename": "add_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change site",
+    "content_type": 7,
+    "codename": "change_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete site",
+    "content_type": 7,
+    "codename": "delete_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view site",
+    "content_type": 7,
+    "codename": "view_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add check result",
+    "content_type": 8,
+    "codename": "add_checkresult"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change check result",
+    "content_type": 8,
+    "codename": "change_checkresult"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete check result",
+    "content_type": 8,
+    "codename": "delete_checkresult"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view check result",
+    "content_type": 8,
+    "codename": "view_checkresult"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add incident",
+    "content_type": 9,
+    "codename": "add_incident"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change incident",
+    "content_type": 9,
+    "codename": "change_incident"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete incident",
+    "content_type": 9,
+    "codename": "delete_incident"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view incident",
+    "content_type": 9,
+    "codename": "view_incident"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "users",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "sites",
+    "model": "site"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "checks",
+    "model": "checkresult"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "incidents",
+    "model": "incident"
+  }
+},
+{
+  "model": "users.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$vgYjKsmElH4JToefhevJyE$gdqcf7G8wIA8HZrsqlBS6OwgRv3v3WeYy09haBBIIiA=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "ilijaaaaa",
+    "email": "ilya@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-09-19T19:10:57.864Z",
+    "full_name": "",
+    "telegram_chat_id": "395668459",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$VdAabvDFM8Jcurt5KplwXx$sFd1VMONa0Nz0iAm/ogZR3Ypgr4n3mkl5fnQIaTvcAE=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "ily1a",
+    "email": "il1ya@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-09-20T11:02:19.631Z",
+    "full_name": "",
+    "telegram_chat_id": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$nhRNi6OYMy7WpEbwzZpgPH$afwf3GK0RKhdKNBr6fNv6AIyOWd4uG6BZFOgrO9L7ug=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "saffdsadfsadfasasdfsadfsadf",
+    "email": "secret123@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-09-20T19:34:31.936Z",
+    "full_name": "",
+    "telegram_chat_id": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sites.site",
+  "pk": 9,
+  "fields": {
+    "name": "Google",
+    "target": "https://google.com",
+    "host": "google.com",
+    "check_type": "http",
+    "http_method": "HEAD",
+    "port": 443,
+    "timeout": 1,
+    "check_interval": 10,
+    "expected_status_code": 200,
+    "degraded_latency_ms": 1500,
+    "fail_threshold": 3,
+    "recovery_threshold": 2,
+    "ssl_check_enabled": false,
+    "ssl_expiry_alert_days": 7,
+    "ssl_expires_at": null,
+    "ssl_last_checked_at": null,
+    "last_notified_at": "2025-09-21T12:49:43.072Z",
+    "domain_check_enabled": false,
+    "domain_expiry_alert_days": 14,
+    "domain_expires_at": null,
+    "domain_last_checked_at": null,
+    "status": "ok",
+    "fail_count": 0,
+    "success_streak": 35,
+    "active": true,
+    "created_at": "2025-09-21T12:13:54.599Z",
+    "updated_at": "2025-09-21T12:49:43.466Z",
+    "users": [
+      2
+    ]
+  }
+},
+{
+  "model": "sites.site",
+  "pk": 10,
+  "fields": {
+    "name": "Википедия",
+    "target": "https://ru.wikipedia.org",
+    "host": "ru.wikipedia.org",
+    "check_type": "http",
+    "http_method": "HEAD",
+    "port": 443,
+    "timeout": 1,
+    "check_interval": 60,
+    "expected_status_code": 200,
+    "degraded_latency_ms": 1500,
+    "fail_threshold": 3,
+    "recovery_threshold": 2,
+    "ssl_check_enabled": true,
+    "ssl_expiry_alert_days": 7,
+    "ssl_expires_at": null,
+    "ssl_last_checked_at": null,
+    "last_notified_at": "2025-09-21T12:49:42.639Z",
+    "domain_check_enabled": true,
+    "domain_expiry_alert_days": 14,
+    "domain_expires_at": null,
+    "domain_last_checked_at": null,
+    "status": "fail",
+    "fail_count": 27,
+    "success_streak": 0,
+    "active": true,
+    "created_at": "2025-09-21T12:17:13.420Z",
+    "updated_at": "2025-09-21T12:49:43.070Z",
+    "users": [
+      2
+    ]
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 482,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:14:55.633Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 614.4485473632812,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:14:55.633Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 486,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:15:45.576Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 430.50575256347656,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:15:45.576Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 488,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:16:05.606Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 556.9934844970703,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:16:05.606Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 490,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:16:25.442Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 420.4392433166504,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:16:25.442Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 492,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:16:45.412Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 396.6689109802246,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:16:45.412Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 493,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:17:05.562Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 529.808521270752,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:17:05.562Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 494,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:17:25.431Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 394.12522315979004,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:17:25.431Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 495,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:17:45.529Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 493.65687370300293,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:17:45.529Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 496,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:18:05.617Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 574.0323066711426,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:18:05.617Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 497,
+  "fields": {
+    "site": 10,
+    "timestamp": "2025-09-21T12:18:15.318Z",
+    "status": "fail",
+    "status_code": 403,
+    "latency_ms": 278.1071662902832,
+    "error_type": "http_error",
+    "error_message": null,
+    "created_at": "2025-09-21T12:18:15.318Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 498,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:18:25.442Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 403.5789966583252,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:18:25.442Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 499,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:18:45.440Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 400.1145362854004,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:18:45.440Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 500,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:19:05.441Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 403.95283699035645,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:19:05.441Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 501,
+  "fields": {
+    "site": 10,
+    "timestamp": "2025-09-21T12:19:25.244Z",
+    "status": "fail",
+    "status_code": 403,
+    "latency_ms": 196.9749927520752,
+    "error_type": "http_error",
+    "error_message": null,
+    "created_at": "2025-09-21T12:19:25.244Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 502,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:19:25.432Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 384.7486972808838,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:19:25.432Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 503,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:19:45.429Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 390.25282859802246,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:19:45.429Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 504,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:20:05.498Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 462.1620178222656,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:20:05.498Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 505,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:20:25.550Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 514.5659446716309,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:20:25.550Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 506,
+  "fields": {
+    "site": 10,
+    "timestamp": "2025-09-21T12:20:35.231Z",
+    "status": "fail",
+    "status_code": 403,
+    "latency_ms": 196.55776023864746,
+    "error_type": "http_error",
+    "error_message": null,
+    "created_at": "2025-09-21T12:20:35.231Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 507,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:20:45.450Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 411.895751953125,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:20:45.450Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 508,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:21:05.457Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 403.3486843109131,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:21:05.457Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 509,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:21:25.442Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 404.45971488952637,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:21:25.442Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 510,
+  "fields": {
+    "site": 10,
+    "timestamp": "2025-09-21T12:21:45.424Z",
+    "status": "fail",
+    "status_code": 403,
+    "latency_ms": 384.8576545715332,
+    "error_type": "http_error",
+    "error_message": null,
+    "created_at": "2025-09-21T12:21:45.424Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 511,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:21:45.431Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 387.7885341644287,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:21:45.431Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 512,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:22:05.437Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 394.38509941101074,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:22:05.437Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 513,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:22:25.426Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 389.91498947143555,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:22:25.426Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 514,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:22:45.434Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 392.49372482299805,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:22:45.434Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 515,
+  "fields": {
+    "site": 10,
+    "timestamp": "2025-09-21T12:22:55.241Z",
+    "status": "fail",
+    "status_code": 403,
+    "latency_ms": 204.71978187561035,
+    "error_type": "http_error",
+    "error_message": null,
+    "created_at": "2025-09-21T12:22:55.241Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 516,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:23:05.470Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 422.7335453033447,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:23:05.470Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 517,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:23:25.448Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 405.7595729827881,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:23:25.448Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 518,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:23:45.568Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 530.1892757415771,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:23:45.568Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 519,
+  "fields": {
+    "site": 10,
+    "timestamp": "2025-09-21T12:24:05.230Z",
+    "status": "fail",
+    "status_code": 403,
+    "latency_ms": 190.6425952911377,
+    "error_type": "http_error",
+    "error_message": null,
+    "created_at": "2025-09-21T12:24:05.230Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 520,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:24:05.462Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 422.7595329284668,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:24:05.462Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 521,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:24:25.434Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 392.96483993530273,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:24:25.434Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 522,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:24:45.431Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 393.91613006591797,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:24:45.431Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 523,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:25:05.431Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 391.07370376586914,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:25:05.431Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 524,
+  "fields": {
+    "site": 10,
+    "timestamp": "2025-09-21T12:25:15.332Z",
+    "status": "fail",
+    "status_code": 403,
+    "latency_ms": 288.2802486419678,
+    "error_type": "http_error",
+    "error_message": null,
+    "created_at": "2025-09-21T12:25:15.332Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 525,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:25:25.585Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 543.3380603790283,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:25:25.585Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 526,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:25:45.698Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 657.9756736755371,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:25:45.698Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 527,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:26:05.479Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 425.3416061401367,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:26:05.479Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 528,
+  "fields": {
+    "site": 10,
+    "timestamp": "2025-09-21T12:26:25.353Z",
+    "status": "fail",
+    "status_code": 403,
+    "latency_ms": 212.6028537750244,
+    "error_type": "http_error",
+    "error_message": null,
+    "created_at": "2025-09-21T12:26:25.353Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 529,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:26:25.667Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 551.1722564697266,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:26:25.667Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 530,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:26:45.773Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 521.2538242340088,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:26:45.773Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 531,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:27:05.852Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 574.7292041778564,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:27:05.852Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 532,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:27:25.901Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 633.3885192871094,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:27:25.901Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 533,
+  "fields": {
+    "site": 10,
+    "timestamp": "2025-09-21T12:27:35.246Z",
+    "status": "fail",
+    "status_code": 403,
+    "latency_ms": 201.80559158325195,
+    "error_type": "http_error",
+    "error_message": null,
+    "created_at": "2025-09-21T12:27:35.246Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 534,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:27:45.572Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 532.9294204711914,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:27:45.572Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 535,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:28:05.774Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 634.0491771697998,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:28:05.774Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 536,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:28:25.429Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 384.7348690032959,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:28:25.429Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 537,
+  "fields": {
+    "site": 10,
+    "timestamp": "2025-09-21T12:28:46.627Z",
+    "status": "fail",
+    "status_code": 403,
+    "latency_ms": 1347.2561836242676,
+    "error_type": "http_error",
+    "error_message": null,
+    "created_at": "2025-09-21T12:28:46.627Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 538,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:28:47.185Z",
+    "status": "degraded",
+    "status_code": 200,
+    "latency_ms": 1750.152349472046,
+    "error_type": "latency",
+    "error_message": "High latency: 1750ms",
+    "created_at": "2025-09-21T12:28:47.185Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 539,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:29:05.564Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 450.0312805175781,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:29:05.564Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 540,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:29:27.212Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 1372.7755546569824,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:29:27.212Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 541,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:29:47.656Z",
+    "status": "degraded",
+    "status_code": 200,
+    "latency_ms": 1501.99556350708,
+    "error_type": "latency",
+    "error_message": "High latency: 1501ms",
+    "created_at": "2025-09-21T12:29:47.656Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 542,
+  "fields": {
+    "site": 10,
+    "timestamp": "2025-09-21T12:29:56.490Z",
+    "status": "fail",
+    "status_code": 403,
+    "latency_ms": 383.4097385406494,
+    "error_type": "http_error",
+    "error_message": null,
+    "created_at": "2025-09-21T12:29:56.490Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 543,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:30:07.445Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 970.2844619750977,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:30:07.445Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 544,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:30:26.045Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 627.8815269470215,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:30:26.045Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 545,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:30:46.194Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 653.252124786377,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:30:46.194Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 546,
+  "fields": {
+    "site": 10,
+    "timestamp": "2025-09-21T12:31:05.395Z",
+    "status": "fail",
+    "status_code": 403,
+    "latency_ms": 222.9597568511963,
+    "error_type": "http_error",
+    "error_message": null,
+    "created_at": "2025-09-21T12:31:05.395Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 547,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:31:05.643Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 469.0573215484619,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:31:05.643Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 548,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:31:25.693Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 521.68869972229,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:31:25.693Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 549,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:31:45.576Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 405.4398536682129,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:31:45.576Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 550,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:32:05.709Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 537.3060703277588,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:32:05.709Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 551,
+  "fields": {
+    "site": 10,
+    "timestamp": "2025-09-21T12:32:15.556Z",
+    "status": "fail",
+    "status_code": 403,
+    "latency_ms": 381.18958473205566,
+    "error_type": "http_error",
+    "error_message": null,
+    "created_at": "2025-09-21T12:32:15.556Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 552,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:32:25.563Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 389.080286026001,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:32:25.563Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 553,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:32:45.575Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 401.3998508453369,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:32:45.575Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 554,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:33:05.560Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 382.6100826263428,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:33:05.560Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 555,
+  "fields": {
+    "site": 10,
+    "timestamp": "2025-09-21T12:33:25.368Z",
+    "status": "fail",
+    "status_code": 403,
+    "latency_ms": 194.71478462219238,
+    "error_type": "http_error",
+    "error_message": null,
+    "created_at": "2025-09-21T12:33:25.368Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 556,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:33:25.583Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 408.6499214172363,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:33:25.583Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 557,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:33:45.581Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 387.3260021209717,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:33:45.581Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 558,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:34:05.591Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 397.571325302124,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:34:05.591Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 559,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:34:25.622Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 407.8214168548584,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:34:25.622Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 560,
+  "fields": {
+    "site": 10,
+    "timestamp": "2025-09-21T12:34:35.387Z",
+    "status": "fail",
+    "status_code": 403,
+    "latency_ms": 203.92251014709473,
+    "error_type": "http_error",
+    "error_message": null,
+    "created_at": "2025-09-21T12:34:35.387Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 561,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:34:45.659Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 462.8944396972656,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:34:45.659Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 562,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:35:05.607Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 413.9101505279541,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:35:05.607Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 563,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:35:25.566Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 387.9868984222412,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:35:25.566Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 564,
+  "fields": {
+    "site": 10,
+    "timestamp": "2025-09-21T12:35:46.496Z",
+    "status": "fail",
+    "status_code": 403,
+    "latency_ms": 843.3084487915039,
+    "error_type": "http_error",
+    "error_message": null,
+    "created_at": "2025-09-21T12:35:46.496Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 565,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:35:47.096Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 1456.7668437957764,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:35:47.096Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 566,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:36:06.890Z",
+    "status": "degraded",
+    "status_code": 200,
+    "latency_ms": 1504.417896270752,
+    "error_type": "latency",
+    "error_message": "High latency: 1504ms",
+    "created_at": "2025-09-21T12:36:06.890Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 567,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:36:26.617Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 893.57590675354,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:36:26.617Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 568,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:36:45.591Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 407.8702926635742,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:36:45.591Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 569,
+  "fields": {
+    "site": 10,
+    "timestamp": "2025-09-21T12:36:55.384Z",
+    "status": "fail",
+    "status_code": 403,
+    "latency_ms": 206.9859504699707,
+    "error_type": "http_error",
+    "error_message": null,
+    "created_at": "2025-09-21T12:36:55.384Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 570,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:37:05.832Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 503.2463073730469,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:37:05.832Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 571,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:37:25.875Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 595.1414108276367,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:37:25.875Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 572,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:37:45.560Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 384.5021724700928,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:37:45.560Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 573,
+  "fields": {
+    "site": 10,
+    "timestamp": "2025-09-21T12:38:05.396Z",
+    "status": "fail",
+    "status_code": 403,
+    "latency_ms": 215.23690223693848,
+    "error_type": "http_error",
+    "error_message": null,
+    "created_at": "2025-09-21T12:38:05.396Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 574,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:38:05.561Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 380.6648254394531,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:38:05.561Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 575,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:38:25.629Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 430.1333427429199,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:38:25.630Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 576,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:38:46.400Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 692.7225589752197,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:38:46.400Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 577,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:39:05.993Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 729.0859222412109,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:39:05.993Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 578,
+  "fields": {
+    "site": 10,
+    "timestamp": "2025-09-21T12:39:16.249Z",
+    "status": "fail",
+    "status_code": 403,
+    "latency_ms": 437.17145919799805,
+    "error_type": "http_error",
+    "error_message": null,
+    "created_at": "2025-09-21T12:39:16.249Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 579,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:39:26.374Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 802.725076675415,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:39:26.374Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 580,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:39:45.912Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 656.806468963623,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:39:45.912Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 581,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:40:06.008Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 723.0658531188965,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:40:06.008Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 582,
+  "fields": {
+    "site": 10,
+    "timestamp": "2025-09-21T12:40:25.608Z",
+    "status": "fail",
+    "status_code": 403,
+    "latency_ms": 413.6836528778076,
+    "error_type": "http_error",
+    "error_message": null,
+    "created_at": "2025-09-21T12:40:25.608Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 583,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:40:25.872Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 678.7910461425781,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:40:25.872Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 584,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:40:45.939Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 647.5608348846436,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:40:45.939Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 585,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:41:06.057Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 771.2140083312988,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:41:06.057Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 586,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:41:26.401Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 911.4224910736084,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:41:26.402Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 587,
+  "fields": {
+    "site": 10,
+    "timestamp": "2025-09-21T12:41:35.528Z",
+    "status": "fail",
+    "status_code": 403,
+    "latency_ms": 227.73981094360352,
+    "error_type": "http_error",
+    "error_message": null,
+    "created_at": "2025-09-21T12:41:35.528Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 588,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:41:45.828Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 518.7017917633057,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:41:45.828Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 589,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:42:06.059Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 674.7124195098877,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:42:06.059Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 590,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:42:25.888Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 640.1331424713135,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:42:25.888Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 591,
+  "fields": {
+    "site": 10,
+    "timestamp": "2025-09-21T12:42:45.680Z",
+    "status": "fail",
+    "status_code": 403,
+    "latency_ms": 374.2506504058838,
+    "error_type": "http_error",
+    "error_message": null,
+    "created_at": "2025-09-21T12:42:45.680Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 592,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:42:46.162Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 858.2062721252441,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:42:46.162Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 593,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:43:07.081Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 1414.4625663757324,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:43:07.081Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 594,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:43:25.968Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 658.7419509887695,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:43:25.968Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 595,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:43:45.879Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 448.1358528137207,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:43:45.879Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 596,
+  "fields": {
+    "site": 10,
+    "timestamp": "2025-09-21T12:43:55.573Z",
+    "status": "fail",
+    "status_code": 403,
+    "latency_ms": 255.02490997314453,
+    "error_type": "http_error",
+    "error_message": null,
+    "created_at": "2025-09-21T12:43:55.573Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 597,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:44:05.891Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 672.0836162567139,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:44:05.891Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 598,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:44:26.036Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 642.02880859375,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:44:26.036Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 599,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:44:45.783Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 477.9083728790283,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:44:45.783Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 600,
+  "fields": {
+    "site": 10,
+    "timestamp": "2025-09-21T12:45:05.586Z",
+    "status": "fail",
+    "status_code": 403,
+    "latency_ms": 253.39722633361816,
+    "error_type": "http_error",
+    "error_message": null,
+    "created_at": "2025-09-21T12:45:05.586Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 601,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:45:05.996Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 671.6983318328857,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:45:05.996Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 602,
+  "fields": {
+    "site": 10,
+    "timestamp": "2025-09-21T12:47:22.762Z",
+    "status": "fail",
+    "status_code": 403,
+    "latency_ms": 410.8853340148926,
+    "error_type": "http_error",
+    "error_message": null,
+    "created_at": "2025-09-21T12:47:22.763Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 603,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:47:23.008Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 656.3558578491211,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:47:23.008Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 604,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:47:42.840Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 526.9644260406494,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:47:42.840Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 605,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:48:02.889Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 575.3998756408691,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:48:02.889Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 606,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:48:22.932Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 584.7413539886475,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:48:22.932Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 607,
+  "fields": {
+    "site": 10,
+    "timestamp": "2025-09-21T12:48:32.607Z",
+    "status": "fail",
+    "status_code": 403,
+    "latency_ms": 265.81454277038574,
+    "error_type": "http_error",
+    "error_message": null,
+    "created_at": "2025-09-21T12:48:32.607Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 608,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:48:42.831Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 520.2620029449463,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:48:42.831Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 609,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:49:03.084Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 686.5806579589844,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:49:03.084Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 610,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:49:23.255Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 683.7077140808105,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:49:23.255Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 611,
+  "fields": {
+    "site": 10,
+    "timestamp": "2025-09-21T12:49:42.629Z",
+    "status": "fail",
+    "status_code": 403,
+    "latency_ms": 245.94831466674805,
+    "error_type": "http_error",
+    "error_message": null,
+    "created_at": "2025-09-21T12:49:42.630Z"
+  }
+},
+{
+  "model": "checks.checkresult",
+  "pk": 612,
+  "fields": {
+    "site": 9,
+    "timestamp": "2025-09-21T12:49:43.057Z",
+    "status": "ok",
+    "status_code": 200,
+    "latency_ms": 672.4038124084473,
+    "error_type": "none",
+    "error_message": null,
+    "created_at": "2025-09-21T12:49:43.057Z"
+  }
+},
+{
+  "model": "incidents.incident",
+  "pk": 6,
+  "fields": {
+    "site": 10,
+    "start_time": "2025-09-21T12:20:35.236Z",
+    "end_time": null,
+    "severity": "major",
+    "description": "Site https://ru.wikipedia.org is down"
+  }
+}
+]
