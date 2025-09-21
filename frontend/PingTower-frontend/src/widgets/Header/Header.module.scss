@@ -1,0 +1,155 @@
+@use '@/assets/scss/mixins' as *;
+
+.container {
+	padding: 20px 0;
+	display: flex;
+	justify-content: center;
+	border-bottom: 1px solid var(--outline-base);
+}
+
+.flex {
+	width: 1080px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	text-decoration: none;
+
+	img {
+		width: 40px;
+		height: 40px;
+	}
+
+	.text {
+		font-family: 'Geologica';
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 110%;
+		color: var(--on-surface);
+	}
+}
+
+.account {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.notification {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 96px;
+	padding: 8px;
+	background-color: var(--surface-container-lowest);
+	border: 1px solid var(--outline-base);
+	cursor: pointer;
+
+	&:hover {
+		border-color: var(--outline-variant);
+	}
+
+	&:active {
+		border-color: var(--success);
+	}
+}
+
+.profileWrapper {
+	position: relative;
+}
+
+.profile {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	padding: 9.5px 16px 9.5px 8px;
+	background-color: var(--surface-container-lowest);
+	border: 1px solid var(--outline-base);
+	border-radius: 96px;
+	cursor: pointer;
+
+	&:hover {
+		border-color: var(--outline-variant);
+	}
+
+	&:active {
+		border-color: var(--success);
+	}
+
+	img {
+		width: 24px;
+		height: 24px;
+	}
+
+	.text {
+		@include btnM;
+		color: var(--on-surface);
+		padding: 0;
+	}
+}
+
+.profileDropdown {
+	position: absolute;
+	top: calc(100% + 8px);
+	right: 0;
+	width: 210px;
+	background-color: var(--surface-bright);
+	border-radius: 12px;
+	border: 1px solid var(--outline-base);
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+	padding: 16px;
+	z-index: 20;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.userInfo {
+	.name {
+		@include title5;
+		color: var(--on-surface);
+		margin: 0;
+	}
+	.email {
+		@include bodyS;
+		color: var(--on-surface-variant);
+		margin: 4px 0 0 0;
+	}
+}
+
+.logoutButton {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	width: 100%;
+	padding: 10px;
+	border: none;
+	border-radius: 8px;
+	background-color: var(--error-container);
+	color: var(--on-error-container);
+	font-size: 12px;
+	font-weight: 500;
+	font-family: 'Inter';
+	line-height: 130%;
+	cursor: pointer;
+	transition: background-color 0.2s;
+
+	&:hover {
+		background-color: var(--error-container-lowest);
+	}
+
+	img {
+		width: 16px;
+		height: 16px;
+	}
+}
+
+.line {
+	border-top: 1px solid var(--outline-base);
+}

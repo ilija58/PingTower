@@ -1,0 +1,94 @@
+.selectWrapper {
+	position: relative;
+	width: 100%;
+}
+
+.selectDisplay {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 10px 12px;
+	border-radius: 8px;
+	border: 1px solid var(--outline-base);
+	background-color: var(--surface-bright);
+	font-size: 14px;
+	font-family: 'Inter';
+	color: var(--on-surface);
+	cursor: pointer;
+	text-align: left;
+
+	&:focus {
+		border: 1px solid var(--outline-variant);
+		background-color: var(--surface-container-lowest);
+	}
+}
+
+.arrow {
+	border: solid var(--on-surface-variant);
+	border-width: 0 2px 2px 0;
+	display: inline-block;
+	padding: 3px;
+	transform: rotate(45deg);
+	transition: transform 0.2s ease-in-out;
+
+	&.up {
+		transform: rotate(-135deg);
+	}
+}
+
+.optionsContainer {
+	position: absolute;
+	top: calc(100% + 4px);
+	left: 0;
+	right: 0;
+	background-color: var(--surface-bright);
+	border: 1px solid var(--outline-base);
+	border-radius: 8px;
+	z-index: 10;
+	max-height: 200px;
+	overflow-y: auto;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+	/* Стили для скроллбара (Webkit) */
+	&::-webkit-scrollbar {
+		width: 12px;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: transparent;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: var(--neutral-container-high);
+		border-radius: 20px;
+		border: 4px solid transparent;
+		background-clip: content-box;
+	}
+
+	/* Стили для скроллбара (Firefox) */
+	scrollbar-width: thin;
+	scrollbar-color: var(--neutral-container-high) transparent;
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 4px;
+	}
+
+	li {
+		padding: 11px 14px;
+		font-family: 'Inter';
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 130%;
+
+		cursor: pointer;
+		border-radius: 6px;
+
+		/* ВОТ САМЫЙ СТИЛЬ ПРИ НАВЕДЕНИИ */
+		&:hover {
+			background-color: rgba(31, 31, 31, 0.06);
+		}
+	}
+}

@@ -1,0 +1,84 @@
+// Title
+@mixin heading1 {
+}
+@mixin heading2 {
+}
+@mixin title1 {
+	font-weight: 600;
+	font-size: 32px;
+	line-height: 110%;
+}
+@mixin title2 {
+}
+@mixin title3 {
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 110%;
+}
+@mixin title4 {
+	font-weight: 600;
+	font-size: 20px;
+}
+@mixin title5 {
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 110%;
+}
+
+// Basic
+@mixin bodyLAccent {
+}
+@mixin bodyL {
+}
+@mixin bodyMAccent {
+}
+@mixin bodyM {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 130%;
+}
+@mixin bodySAccent {
+}
+@mixin bodyS {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 130%;
+}
+@mixin caption {
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 130%;
+}
+
+// Buttons
+@mixin btnL {
+	padding: 16px 24px;
+	border-radius: 96px;
+}
+@mixin btnM {
+	font-family: 'Inter';
+	padding: 12px 20px;
+	border-radius: 96px;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 130%;
+}
+@mixin btnS {
+	padding: 10px 16px;
+	border-radius: 96px;
+}
+@mixin btnXS {
+	padding: 8px 12px;
+	border-radius: 96px;
+	font-family: 'Inter';
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 130%;
+}
+
+// Labels
+@mixin labelS {
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 130%;
+}

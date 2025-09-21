@@ -3,6 +3,8 @@ from django.db import models
 from django.core.exceptions import ValidationError
 from urllib.parse import urlparse
 
+from django.utils import timezone
+
 
 class Site(models.Model):
     CHECK_TYPES = [
@@ -62,7 +64,7 @@ class Site(models.Model):
     ssl_expiry_alert_days = models.IntegerField(default=7)
     ssl_expires_at = models.DateTimeField(blank=True, null=True)
     ssl_last_checked_at = models.DateTimeField(blank=True, null=True)
-
+    last_notified_at = models.DateTimeField(blank=True, null=True)
     domain_check_enabled = models.BooleanField(default=True)
     domain_expiry_alert_days = models.IntegerField(default=14)
     domain_expires_at = models.DateTimeField(blank=True, null=True)

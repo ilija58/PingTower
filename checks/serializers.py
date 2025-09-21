@@ -13,6 +13,7 @@ class CheckResultSerializer(serializers.ModelSerializer):
             "site",
             "site_name",
             "site_target",
+            "timestamp",
             "status",
             "status_code",
             "latency_ms",

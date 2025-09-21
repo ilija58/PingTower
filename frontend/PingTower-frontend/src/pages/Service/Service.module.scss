@@ -1,0 +1,159 @@
+@use '../../assets/scss/mixins' as *;
+
+.container {
+	margin-top: 32px;
+}
+
+.breadcrumbs {
+	@include bodyS;
+	color: var(--on-surface-variant);
+
+	.active {
+		color: var(--on-surface);
+	}
+
+	a {
+		color: var(--on-surface-variant);
+		text-decoration: none;
+	}
+}
+
+.statistics {
+	margin-top: 24px;
+}
+
+.info {
+	margin-top: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.left {
+	display: flex;
+	flex-direction: column;
+}
+
+.top {
+	@include title1;
+	color: var(--on-surface);
+	margin-bottom: 12px;
+}
+
+.bottom {
+	display: flex;
+	align-items: center;
+}
+
+.status {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 130%;
+	padding: 3.5px 12px;
+	margin-right: 8px;
+	border-radius: 96px;
+}
+
+.success {
+	color: var(--on-success-container);
+	background-color: var(--success-container);
+}
+
+.error {
+	color: var(--on-error-container);
+	background-color: var(--error-container);
+}
+
+.warning {
+	color: var(--on-warning-container);
+	background-color: var(--warning-container);
+}
+
+.check {
+	@include bodyM;
+	color: var(--on-surface-variant);
+}
+
+.right {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.stop,
+.configure,
+.delete {
+	@include btnXS;
+	border: 0;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+
+	img {
+		margin-right: 5px;
+	}
+}
+
+.stop,
+.configure {
+	color: var(--on-neutral-container);
+	background-color: var(--neutral-container);
+
+	&:disabled {
+		color: var(--on-disabled-container);
+		background-color: var(--disabled-container);
+		cursor: auto;
+
+		img {
+			opacity: 0.5;
+		}
+	}
+}
+
+.delete {
+	color: var(--on-error-container);
+	background-color: var(--error-container);
+}
+
+.statistics {
+	margin-top: 48px;
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	gap: 16px;
+}
+
+.cardS {
+	padding: 16px 20px;
+	border: 1px solid var(--outline-base);
+	border-radius: 14px;
+	box-shadow:
+		0px 4px 16px 0px rgba(60, 83, 135, 0.09),
+		0px 8px 22px 8px rgba(74, 80, 94, 0.05);
+
+	.heading {
+		@include bodyM;
+		color: var(--on-surface-variant);
+	}
+
+	.text {
+		@include title4;
+		color: var(--on-surface);
+		margin-bottom: 17px;
+	}
+}
+
+.cardS {
+	width: 224px;
+	min-height: 150px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	.text {
+		margin: 0;
+	}
+}
+
+.chart {
+	grid-column: 1/ -1;
+}

@@ -1,0 +1,23 @@
+{
+	"arrowParens": "avoid",
+	"useTabs": true,
+	"singleQuote": true,
+	"tabWidth": 2,
+	"semi": false,
+	"trailingComma": "none",
+	"plugins": ["@trivago/prettier-plugin-sort-imports"],
+	"importOrder": [
+		"<THIRD_PARTY_MODULES>",
+		"^@/hooks/(.*)$",
+		"^@/providers/(.*)$",
+		"^@/store/(.*)$",
+		"^@/services/(.*)$",
+		"^@/widgets/(.*)$",
+		"^@/assets/(.*)$",
+		"^^.+\\.(template\\.html|nodule\\.scss)$",
+		"^../(.*)",
+		"^./(.*)$"
+	],
+	"importOrderSeparation": true,
+	"importOrderSortSpecifiers": true
+}

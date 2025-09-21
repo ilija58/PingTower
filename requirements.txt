@@ -10,6 +10,7 @@ click-didyoumean==0.3.1
 click-plugins==1.1.1.2
 click-repl==0.3.0
 Django==4.2.1
+django-cors-headers==4.9.0
 djangorestframework==3.16.1
 djangorestframework_simplejwt==5.5.1
 drf-spectacular==0.28.0
@@ -25,6 +26,8 @@ psycopg==3.2.10
 psycopg-binary==3.2.10
 PyJWT==2.10.1
 python-dateutil==2.9.0.post0
+python-dotenv==1.1.1
+pythonping==1.1.4
 PyYAML==6.0.2
 referencing==0.36.2
 requests==2.32.5

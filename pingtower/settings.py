@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     "incidents",
     "drf_spectacular",
     "drf_spectacular_sidecar",
+    "corsheaders",
 ]
 
 REST_FRAMEWORK = {
@@ -58,6 +59,7 @@ REST_FRAMEWORK = {
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -130,6 +132,8 @@ CELERY_BEAT_SCHEDULE = {}
 
 TELEGRAM_BOT_TOKEN = "7623273595:AAE3lr7o-ncGoAAw19h9A99v7ECsRvhfiLc"
 TELEGRAM_CHAT_ID = "395668459"
+
+CORS_ALLOW_ALL_ORIGINS = True
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/

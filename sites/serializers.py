@@ -21,6 +21,7 @@ class SiteSerializer(serializers.ModelSerializer):
             "fail_threshold",
             "recovery_threshold",
             "ssl_check_enabled",
+            "ssl_expires_at",
             "ssl_expiry_alert_days",
             "domain_check_enabled",
             "domain_expiry_alert_days",

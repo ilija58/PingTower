@@ -1,0 +1,132 @@
+@use '../../assets/scss/mixins' as *;
+
+.incidents {
+	background-color: var(--surface-bright);
+	border-radius: 14px;
+	border: 1px solid var(--outline-base);
+	padding: 20px;
+	margin-top: 24px;
+	box-shadow:
+		0px 4px 16px 0px rgba(60, 83, 135, 0.09),
+		0px 8px 22px 8px rgba(74, 80, 94, 0.05);
+
+	.title {
+		@include title4;
+		color: var(--on-surface);
+		margin: 0;
+		margin-bottom: 24px;
+	}
+
+	.subtitle {
+		@include bodyM;
+		color: var(--on-surface-variant);
+		margin-bottom: 8px;
+	}
+
+	.timeline {
+		display: flex;
+		gap: 4px;
+		margin-bottom: 20px;
+	}
+
+	.timelineBar {
+		flex-grow: 1;
+		height: 56px;
+		border-radius: 8px;
+		cursor: pointer;
+		transition: all 0.2s ease-in-out;
+
+		&.ok {
+			background-color: var(--success);
+		}
+
+		&.error {
+			background-color: var(--error);
+		}
+
+		&.selected {
+			&.ok {
+				background-color: var(--success-container-lowest);
+			}
+
+			&.error {
+				background-color: var(--error-container-lowest);
+			}
+		}
+	}
+
+	.listHeader {
+		font-size: 18px;
+		font-weight: bold;
+		margin-bottom: 10px;
+		padding-bottom: 10px;
+		border-bottom: 1px solid #eee;
+	}
+
+	.list {
+		.noIncidents {
+			text-align: center;
+			padding: 16px 0;
+
+			img {
+				width: 64px;
+				height: 64px;
+				margin-bottom: 8px;
+			}
+
+			p {
+				@include title5;
+				color: var(--on-surface);
+				margin: 0;
+				margin-bottom: 4px;
+			}
+
+			span {
+				@include bodyS;
+				color: var(--on-surface-variant);
+			}
+		}
+
+		.incidentItem {
+			border-top: 1px solid #eee;
+			padding: 15px 0;
+
+			.incidentHeader {
+				margin-bottom: 10px;
+			}
+
+			.incidentTime {
+				font-weight: bold;
+			}
+
+			.incidentBody {
+				.incidentTitle {
+					font-weight: bold;
+					margin-bottom: 5px;
+
+					.active {
+						background-color: #ffc107;
+						color: #fff;
+						padding: 2px 6px;
+						border-radius: 4px;
+						font-size: 12px;
+						margin-left: 10px;
+					}
+
+					.resolved {
+						background-color: #28a745;
+						color: #fff;
+						padding: 2px 6px;
+						border-radius: 4px;
+						font-size: 12px;
+						margin-left: 10px;
+					}
+				}
+
+				.incidentMessage {
+					color: #555;
+				}
+			}
+		}
+	}
+}

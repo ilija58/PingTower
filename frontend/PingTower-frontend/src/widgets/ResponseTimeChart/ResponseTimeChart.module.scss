@@ -1,0 +1,30 @@
+.container {
+	background-color: var(--surface-bright);
+	padding: 16px;
+	border-radius: 8px;
+	border: 1px solid var(--outline-base);
+	box-shadow:
+		0px 4px 16px 0px rgba(60, 83, 135, 0.09),
+		0px 8px 22px 8px rgba(74, 80, 94, 0.05);
+}
+
+.header {
+	margin-bottom: 16px;
+
+	span {
+		font-size: 12px;
+		color: var(--on-surface-variant);
+		text-transform: uppercase;
+	}
+
+	h4 {
+		margin: 4px 0 0;
+		font-size: 18px;
+		font-weight: 600;
+		color: var(--on-surface);
+	}
+}
+
+.chartWrapper {
+	height: 250px;
+}

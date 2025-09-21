@@ -1,12 +1,18 @@
+
+from datetime import timedelta
+
 import requests
 from django.conf import settings
 from django.utils import timezone
 from .models import Incident
 
+COOLDOWN = timedelta(seconds=7)
+
 def send_telegram_message(chat_id: str, text: str):
     """
     Отправляет уведомление в Telegram конкретному пользователю.
     """
+
     token = getattr(settings, "TELEGRAM_BOT_TOKEN", None)
     if not token or not chat_id:
         return
@@ -24,6 +30,8 @@ def process_incident(site, new_status):
     """
     Управляет созданием и закрытием инцидентов в зависимости от статуса сайта.
     """
+    now = timezone.now()
+
     # Если сайт упал и инцидента ещё нет → создаём
     if new_status == "fail":
         open_incident = site.incidents.filter(end_time__isnull=True).last()
@@ -44,6 +52,10 @@ def process_incident(site, new_status):
             ) + f"\nResolved at {open_incident.end_time}"
             open_incident.save()
 
+
+    #if (now - site.last_notified_at) < COOLDOWN:
+        #return
+
     if new_status == "fail":
         msg = f"Сайт <b>{site.name}</b> ({site.target}) недоступен!"
     elif new_status == "ok":
@@ -57,6 +69,9 @@ def process_incident(site, new_status):
         for user in site.users.all():
             if getattr(user, "telegram_chat_id", None):
                 send_telegram_message(user.telegram_chat_id, msg)
+
+    site.last_notified_at = now
+    site.save(update_fields=["last_notified_at"])
 
 
 
