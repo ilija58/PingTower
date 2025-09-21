@@ -1,4 +1,90 @@
-# PingTower Backend
+# PingTower
+
+A service for monitoring website availability, checking SSL certificates, and tracking domain expirations.  
+The project is built with **Django + Django REST Framework**, with asynchronous tasks powered by **Celery** and RabbitMQ/Redis.  
+
+## 🚀 Features
+- Service availability checks:
+  - HTTP/HTTPS (GET, POST, HEAD)
+  - Ping
+  - TCP
+- Individual check intervals for each site
+- Automatic SSL certificate monitoring
+- Domain expiration checks
+- Incidents with different severity levels (minor / major / critical)
+- Notifications via **Telegram**
+- REST API for the frontend (React + Vite)
+
+---
+
+## ⚙️ Tech Stack
+- Python 3.11+
+- Django 5
+- Django REST Framework
+- Celery
+- RabbitMQ / Redis (as task broker)
+- PostgreSQL (database)
+
+---
+
+## 📂 Installation & Setup (Backend)
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/<your-username>/PingTower.git
+cd PingTower
+```
+
+### 2. Create a virtual environment
+```bash
+python -m venv venv
+source venv/bin/activate   # Linux / Mac
+venv\Scripts\activate    # Windows
+```
+
+### 3. Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Create the database
+```bash
+sudo -u postgres psql
+
+CREATE DATABASE pingtower;
+CREATE USER toweradm WITH PASSWORD 'hhiqkert';
+GRANT ALL PRIVILEGES ON DATABASE pingtower TO toweradm;
+\q
+
+python manage.py migrate
+```
+
+### 5. Run the server
+```bash
+python manage.py runserver
+```
+
+### 6. Run Celery workers
+```bash
+celery -A pingtower worker -l info
+celery -A pingtower beat -l info
+```
+
+---
+
+## 📡 API Documentation
+Swagger UI available at:
+```
+http://127.0.0.1:8000/api/schema/swagger-ui/
+```
+
+---
+
+## 📝 License
+MIT
+
+# PingTower 
+# Backend
 
 Сервис для мониторинга доступности сайтов, проверки SSL-сертификатов и отслеживания доменных имён.  
 Проект написан на **Django + Django REST Framework**, с асинхронными задачами через **Celery** и RabbitMQ/Redis.
@@ -64,7 +150,7 @@ python manage.py runserver
 ```
 
 
-Frontend
+# Frontend
 ## Getting Started
 
 To get a local copy up and running, follow these simple steps.
