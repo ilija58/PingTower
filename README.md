@@ -61,7 +61,7 @@ python manage.py migrate
 ### 5. Запуск
 ```bash
 python manage.py runserver
-
+```
 
 
 Frontend
