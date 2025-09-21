@@ -3,6 +3,9 @@
 	padding: 16px;
 	border-radius: 8px;
 	border: 1px solid var(--outline-base);
+	box-shadow:
+		0px 4px 16px 0px rgba(60, 83, 135, 0.09),
+		0px 8px 22px 8px rgba(74, 80, 94, 0.05);
 }
 
 .header {

@@ -98,6 +98,16 @@
 .configure {
 	color: var(--on-neutral-container);
 	background-color: var(--neutral-container);
+
+	&:disabled {
+		color: var(--on-disabled-container);
+		background-color: var(--disabled-container);
+		cursor: auto;
+
+		img {
+			opacity: 0.5;
+		}
+	}
 }
 
 .delete {
@@ -108,15 +118,17 @@
 .statistics {
 	margin-top: 48px;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1.5fr;
+	grid-template-columns: auto auto auto auto;
 	gap: 16px;
 }
 
-.cardS,
-.cardL {
+.cardS {
 	padding: 16px 20px;
 	border: 1px solid var(--outline-base);
 	border-radius: 14px;
+	box-shadow:
+		0px 4px 16px 0px rgba(60, 83, 135, 0.09),
+		0px 8px 22px 8px rgba(74, 80, 94, 0.05);
 
 	.heading {
 		@include bodyM;
@@ -140,47 +152,6 @@
 	.text {
 		margin: 0;
 	}
-}
-
-.cardL {
-	width: 405px;
-
-	.list {
-		display: flex;
-		flex-direction: column;
-		gap: 10px;
-
-		.item {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			padding-bottom: 11px;
-		}
-
-		.item:not(:last-child) {
-			border-bottom: 1px solid var(--outline-base);
-		}
-
-		.text {
-			@include bodyS;
-			color: var(--on-surface-variant);
-			max-width: 322px;
-			margin: 0;
-		}
-
-		.status {
-			@include labelS;
-			padding: 2px 8px;
-			border-radius: 96px;
-		}
-	}
-}
-
-.cardColumn {
-	display: flex;
-	flex-direction: column;
-	gap: 12px;
-	justify-content: space-between;
 }
 
 .chart {

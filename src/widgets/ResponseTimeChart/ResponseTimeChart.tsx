@@ -1,3 +1,4 @@
+import { type ChartData } from 'chart.js'
 import {
 	BarElement,
 	CategoryScale,
@@ -10,11 +11,15 @@ import {
 import { Bar } from 'react-chartjs-2'
 
 import styles from './ResponseTimeChart.module.scss'
-import { data, options } from './chart.config'
+import { options } from './chart.config'
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 
-export function ResponseTimeChart() {
+interface ResponseTimeChartProps {
+	data: ChartData<'bar'>
+}
+
+export function ResponseTimeChart({ data }: ResponseTimeChartProps) {
 	return (
 		<div className={styles.container}>
 			<div className={styles.header}>

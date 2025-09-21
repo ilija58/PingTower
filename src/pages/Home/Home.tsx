@@ -1,5 +1,7 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+
+import { useDebounce } from '@/hooks/useDebounce'
 
 import { useUserStore } from '@/store/userStore'
 
@@ -13,13 +15,23 @@ import styles from './Home.module.scss'
 import { ROUTES } from '@/routes'
 
 const statusMap = {
-	up: {
-		text: 'Online',
+	ok: {
+		text: 'Доступен',
 		style: 'success',
 		icon: IcoLightSuccess
 	},
-	down: {
-		text: 'Offline',
+	fail: {
+		text: 'Не доступен',
+		style: 'error',
+		icon: IcoLightError
+	},
+	degraded: {
+		text: 'Проверяется',
+		style: 'warning',
+		icon: IcoLightError
+	},
+	unknown: {
+		text: 'Неизвестно',
 		style: 'error',
 		icon: IcoLightError
 	}
@@ -29,10 +41,16 @@ export function Home() {
 	const { services, isLoadingServices, fetchSites } = useUserStore(
 		state => state
 	)
+	const [searchTerm, setSearchTerm] = useState('')
+	const debouncedSearchTerm = useDebounce(searchTerm)
 
 	useEffect(() => {
 		fetchSites()
 	}, [fetchSites])
+
+	const filteredServices = services.filter(service =>
+		service.name.toLowerCase().includes(debouncedSearchTerm.toLowerCase())
+	)
 
 	return (
 		<div className={styles.container}>
@@ -43,7 +61,13 @@ export function Home() {
 				<div className={styles.right}>
 					<div className={styles.searchInputWrapper}>
 						<img src={SearchIcon} alt="Search" className={styles.searchIcon} />
-						<input type="text" placeholder="Поиск..." id={styles.search} />
+						<input
+							type="text"
+							placeholder="Поиск..."
+							id={styles.search}
+							value={searchTerm}
+							onChange={e => setSearchTerm(e.target.value)}
+						/>
 					</div>
 					<Link to={ROUTES.addService.path} className={styles.addBtn}>
 						Добавить сервис
@@ -54,10 +78,10 @@ export function Home() {
 			<div className={styles.content}>
 				{isLoadingServices ? (
 					<p>Загрузка сервисов...</p>
-				) : services.length > 0 ? (
+				) : filteredServices.length > 0 ? (
 					<div className={styles.servicesList}>
-						{services.map(service => {
-							const statusInfo = statusMap[service.status] || statusMap.down
+						{filteredServices.map(service => {
+							const statusInfo = statusMap[service.status]
 							return (
 								<div key={service.id} className={styles.serviceCard}>
 									<div className={styles.left}>

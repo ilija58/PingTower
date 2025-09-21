@@ -26,9 +26,8 @@ api.interceptors.response.use(
 	async error => {
 		const originalRequest = error.config as InternalAxiosRequestConfig
 
-		// Check if the error is 401 and it's not a retry request
 		if (error.response.status === 401 && !originalRequest._retry) {
-			originalRequest._retry = true // Mark it as a retry
+			originalRequest._retry = true
 
 			const refreshToken = getRefreshToken()
 			if (!refreshToken) {

@@ -1,5 +1,5 @@
 import api from '../api'
-import { type Service } from '../types'
+import { type ISiteChecks, type Incidents, type Service } from '../types'
 
 export type CreateSitePayload = {
 	name: string
@@ -22,6 +22,16 @@ export const getAllSites = async (): Promise<Service[]> => {
 
 export const getSiteById = async (id: number): Promise<Service> => {
 	const response = await api.get<Service>(`/api/sites/${id}/`)
+	return response.data
+}
+
+export const getSiteIncidents = async (id: number): Promise<Incidents[]> => {
+	const response = await api.get<Incidents[]>(`/api/sites/${id}/incidents/`)
+	return response.data
+}
+
+export const getSiteChecks = async (id: number): Promise<ISiteChecks[]> => {
+	const response = await api.get<ISiteChecks[]>(`/api/sites/${id}/checks/`)
 	return response.data
 }
 
